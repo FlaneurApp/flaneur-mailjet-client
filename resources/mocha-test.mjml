@@ -1,0 +1,37 @@
+<mjml>
+  <mj-head>
+    <mj-title>My Mocha Test</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,500" />
+
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, sans-serif" />
+      <mj-text font-weight="300" font-size="16" color="#444" line-height="24px" />
+      <mj-section padding="0" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-container background-color="#fff">
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image href="http://www.flaneurapp.com" src="https://unsplash.it/704/298?image=431" />
+        </mj-column>
+      </mj-section>
+      <mj-section full-width="full-width" padding-bottom="32" padding-top="5">
+        <mj-column>
+          <mj-text align="left" font-size="16px">
+            <p>Hello {{var:name:"World"}},</p>
+            <p>
+              This email has been test by <a href="https://github.com/FlaneurApp/flaneur-mailjet-client">flaneur-mailer</a>'s test.
+            </p>
+            <p>
+              Talk to you soon.
+            </p>
+            <p>
+              — <a href="http://www.flaneurapp.com">Flâneur</a>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
