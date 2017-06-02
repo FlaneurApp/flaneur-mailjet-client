@@ -1,0 +1,25 @@
+{
+  "name": "flaneur-mailjet-client",
+  "version": "1.0.0",
+  "description": "A wrapper for sending transactional emails via the MJML format",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlaneurApp/flaneur-mailjet-client.git"
+  },
+  "keywords": [
+    "mailjet",
+    "mjml",
+    "wrapper",
+    "email"
+  ],
+  "author": "Flâneur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlaneurApp/flaneur-mailjet-client/issues"
+  },
+  "homepage": "https://github.com/FlaneurApp/flaneur-mailjet-client#readme"
+}
