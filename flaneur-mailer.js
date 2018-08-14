@@ -15,7 +15,7 @@ class FlaneurMailer {
     }
 
     this.Mailjet = require('node-mailjet').connect(mailjetAPIKeyPublic, mailjetAPIKeyPrivate)
-    this.Mjml = require('mjml')
+    this.mjml2html = require('mjml')
   }
 
   listMyTemplates(verbose = true) {
@@ -70,7 +70,7 @@ class FlaneurMailer {
     const postTemplate = this.Mailjet.post(`template/${templateId}/detailcontent`)
 
     const content = fs.readFileSync(mjmlTemplatePath).toString()
-    const htmlContent = this.Mjml.mjml2html(content)
+    const htmlContent = this.mjml2html(content)
 
     return postTemplate.request({ "Html-part": htmlContent.html })
     .then((result) => {

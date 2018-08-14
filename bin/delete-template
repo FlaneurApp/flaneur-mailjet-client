@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const templateID = process.argv[2];
+const FlaneurMailer = require('../index');
+
+if (templateID) {
+  const flaneurMailer = new FlaneurMailer(
+    process.env.MJ_FLANEUR_APIKEY_PUBLIC,
+    process.env.MJ_FLANEUR_APIKEY_PRIVATE
+  );
+
+  flaneurMailer.deleteTemplate(templateID)
+  .then(() => {
+    console.log("Done deleting");
+    process.exit(0);
+  })
+  .catch((e) => {
+    console.error("Error", e);
+    process.exit(1);
+  })
+}
