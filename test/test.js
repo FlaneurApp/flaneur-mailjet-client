@@ -3,6 +3,7 @@ const chai = require('chai')
 const chaiAsPromised = require("chai-as-promised")
 const Chance = require('chance')
 const chance = new Chance()
+require('dotenv').config()
 
 chai.use(chaiAsPromised);
 chai.should();

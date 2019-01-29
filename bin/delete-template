@@ -2,6 +2,7 @@
 
 const templateID = process.argv[2];
 const FlaneurMailer = require('../index');
+require('dotenv').config()
 
 if (templateID) {
   const flaneurMailer = new FlaneurMailer(

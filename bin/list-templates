@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const FlaneurMailer = require('../index');
+require('dotenv').config()
 
 const flaneurMailer = new FlaneurMailer(
   process.env.MJ_FLANEUR_APIKEY_PUBLIC,
