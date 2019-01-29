@@ -2,9 +2,9 @@ clean:
 	rm -rf node_modules
 
 install:
-	npm install
+	yarn install
 
 test:
-	npm test
+	yarn test
 
 .PHONY: test
