@@ -1,3 +1,3 @@
-var FlaneurMailer = require('./flaneur-mailer')
+var FlaneurMailer = require("./flaneur-mailer");
 
-module.exports = FlaneurMailer
+module.exports = FlaneurMailer;
