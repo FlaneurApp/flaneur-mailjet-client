@@ -20,16 +20,22 @@
     "url": "git+https://github.com/FlaneurApp/flaneur-mailjet-client.git"
   },
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec", 
+    "lint": "eslint ."
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "chance": "^1.0.16",
-    "mocha": "^5.2.0"
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-mocha": "^5.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "mocha": "^5.2.0",
+    "prettier": "^1.16.1"
   },
   "dependencies": {
     "colors": "^1.3.1",
+    "dotenv": "^6.2.0",
     "mjml": "^4.1.2",
     "node-mailjet": "^3.2.1"
   }

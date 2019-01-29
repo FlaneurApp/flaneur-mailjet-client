@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 
-const FlaneurMailer = require('../index');
+const FlaneurMailer = require("../index");
+require("dotenv").config();
 
 const flaneurMailer = new FlaneurMailer(
   process.env.MJ_FLANEUR_APIKEY_PUBLIC,
   process.env.MJ_FLANEUR_APIKEY_PRIVATE
 );
 
-flaneurMailer.listMyTemplates(true)
-.then(() => {
-  console.log("Done listing");
-  process.exit(0);
-})
-.catch((e) => {
-  console.error("Error", e);
-  process.exit(1);
-})
+flaneurMailer
+  .listMyTemplates(true)
+  .then(() => {
+    console.log("Done listing"); // eslint-disable-line no-console
+    process.exit(0);
+  })
+  .catch(e => {
+    console.error("Error", e); // eslint-disable-line no-console
+    process.exit(1);
+  });

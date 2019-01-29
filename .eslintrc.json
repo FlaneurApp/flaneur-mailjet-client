@@ -1,0 +1,17 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": { "es6": true, "mocha": true, "node": true },
+  "plugins": ["prettier", "mocha"],
+  "rules": {
+    "mocha/no-exclusive-tests": "error",
+    "no-unused-vars": [
+      "error",
+      { "ignoreRestSiblings": true, "argsIgnorePattern": "^_" }
+    ],
+    "prettier/prettier": "error"
+  },
+  "extends": ["prettier", "eslint:recommended"]
+}

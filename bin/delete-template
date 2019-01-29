@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const templateID = process.argv[2];
-const FlaneurMailer = require('../index');
+const FlaneurMailer = require("../index");
+require("dotenv").config();
 
 if (templateID) {
   const flaneurMailer = new FlaneurMailer(
@@ -9,13 +10,14 @@ if (templateID) {
     process.env.MJ_FLANEUR_APIKEY_PRIVATE
   );
 
-  flaneurMailer.deleteTemplate(templateID)
-  .then(() => {
-    console.log("Done deleting");
-    process.exit(0);
-  })
-  .catch((e) => {
-    console.error("Error", e);
-    process.exit(1);
-  })
+  flaneurMailer
+    .deleteTemplate(templateID)
+    .then(() => {
+      console.log("Done deleting"); // eslint-disable-line no-console
+      process.exit(0);
+    })
+    .catch(e => {
+      console.error("Error", e); // eslint-disable-line no-console
+      process.exit(1);
+    });
 }
